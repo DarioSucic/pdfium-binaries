@@ -1,4 +1,4 @@
-name: Weekly schedule
+name: Manual Build
 
 on:
   workflow_dispatch:
