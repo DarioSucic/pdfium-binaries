@@ -25,6 +25,7 @@ mkdir -p "$BUILD"
   echo "pdf_enable_v8 = $ENABLE_V8"
   echo "pdf_enable_xfa = $ENABLE_V8"
   echo "treat_warnings_as_errors = false"
+  echo 'pdf_is_complete_lib = true'
 
   case "$OS" in
     ios)
@@ -38,9 +39,6 @@ mkdir -p "$BUILD"
       ;;
     win)
       echo 'pdf_use_win32_gdi = true'
-      ;;
-    wasm):
-      echo 'pdf_is_complete_lib = true'
       ;;
   esac
 
