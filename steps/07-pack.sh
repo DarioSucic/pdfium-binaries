@@ -32,14 +32,14 @@ case "$OS" in
     ls "$BUILD"
     ls "$BUILD/obj"
     mv "$BUILD/obj/libpdfium.a" "$STAGING_LIB"
-    mv "$BUILD/libpdfium.so"    "$STAGING_LIB"
+    # mv "$BUILD/libpdfium.so"    "$STAGING_LIB"
     ;;
 
   mac|ios)
     ls "$BUILD"
     ls "$BUILD/obj"
     mv "$BUILD/obj/libpdfium.a" "$STAGING_LIB"
-    mv "$BUILD/libpdfium.dylib" "$STAGING_LIB"
+    # mv "$BUILD/libpdfium.dylib" "$STAGING_LIB"
     ;;
 
   wasm)
