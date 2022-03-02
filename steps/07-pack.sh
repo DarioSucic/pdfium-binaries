@@ -28,18 +28,21 @@ rm -f "$STAGING/include/README"
 rm -f "$STAGING/include/PRESUBMIT.py"
 
 case "$OS" in
-  android|linux)
-    ls "$BUILD"
-    ls "$BUILD/obj"
+  android)
+    mv "$BUILD/obj/libpdfium.a" "$STAGING_LIB"
+    ;;
+  linux)
     mv "$BUILD/obj/libpdfium.a" "$STAGING_LIB"
     # mv "$BUILD/libpdfium.so"    "$STAGING_LIB"
     ;;
 
-  mac|ios)
-    ls "$BUILD"
-    ls "$BUILD/obj"
+  mac|)
     mv "$BUILD/obj/libpdfium.a" "$STAGING_LIB"
     # mv "$BUILD/libpdfium.dylib" "$STAGING_LIB"
+    ;;
+  
+  ios)
+    mv "$BUILD/libpdfium.dylib" "$STAGING_LIB"
     ;;
 
   wasm)

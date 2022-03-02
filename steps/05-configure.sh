@@ -27,6 +27,9 @@ mkdir -p "$BUILD"
   echo "treat_warnings_as_errors = false"
 
   case "$OS" in
+    android)
+      echo 'pdf_is_complete_lib = true'
+      ;;
     ios)
       echo "ios_enable_code_signing = false"
       ;;
