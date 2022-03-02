@@ -30,12 +30,14 @@ rm -f "$STAGING/include/PRESUBMIT.py"
 case "$OS" in
   android|linux)
     ls "$BUILD"
+    ls "$BUILD/obj"
     mv "$BUILD/obj/libpdfium.a" "$STAGING_LIB"
     mv "$BUILD/libpdfium.so"    "$STAGING_LIB"
     ;;
 
   mac|ios)
     ls "$BUILD"
+    ls "$BUILD/obj"
     mv "$BUILD/obj/libpdfium.a" "$STAGING_LIB"
     mv "$BUILD/libpdfium.dylib" "$STAGING_LIB"
     ;;
