@@ -36,7 +36,7 @@ case "$OS" in
     # mv "$BUILD/libpdfium.so"    "$STAGING_LIB"
     ;;
 
-  mac|)
+  mac)
     mv "$BUILD/obj/libpdfium.a" "$STAGING_LIB"
     # mv "$BUILD/libpdfium.dylib" "$STAGING_LIB"
     ;;
