@@ -64,6 +64,11 @@ jobs:
             target_cpu: x64
             runner: ubuntu-20.04
 
+          - artifact: pdfium-linux-x64-buster
+            target_os: linux
+            target_cpu: x64
+            runner: debian:buster-slim
+
           - artifact: pdfium-mac-arm64
             target_os: mac
             target_cpu: arm64
