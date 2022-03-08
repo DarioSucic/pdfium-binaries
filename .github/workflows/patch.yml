@@ -1,10 +1,7 @@
 name: Verify patches
 
 on:
-  schedule:
-    - cron:  '0 14 * * *'
   workflow_dispatch:
-  push:
 
 jobs:
   verify:
